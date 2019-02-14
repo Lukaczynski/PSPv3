@@ -1,4 +1,4 @@
-package server;
+package server.handlers;
 
 
 import java.io.IOException;
@@ -15,58 +15,46 @@ import java.util.Map;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import server.Controlador;
+import server.Main;
 import server.util.Util;
 
 
 public class HandlerJson implements HttpHandler {
 
-    private static final String HEADER_ALLOW = "Allow";
-    private static final String HEADER_CONTENT_TYPE = "Content-Type";
+
+    private Controlador controlador;
+    private Main.Chanels canal;
 
 
-
-    private static final int STATUS_OK = 200;
-    private static final int STATUS_METHOD_NOT_ALLOWED = 405;
-
-    private static final int NO_RESPONSE_LENGTH = -1;
-
-    private static final String METHOD_GET = "GET";
-    private static final String METHOD_OPTIONS = "OPTIONS";
-    private static final String ALLOWED_METHODS = METHOD_GET + "," + METHOD_OPTIONS;
+    public HandlerJson(Controlador controlador, Main.Chanels canal) {
+        this.canal = canal;
+        this.controlador = controlador;
+    }
 
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
-            final Headers headers = httpExchange.getResponseHeaders();
-            final String requestMethod = httpExchange.getRequestMethod().toUpperCase();
-            switch (requestMethod) {
-                case METHOD_GET:
-                    System.out.println("Metodo get");
-                    System.out.println(httpExchange.getRemoteAddress().getAddress());
-                    final Map<String, List<String>> parametros = Util.getRequestParameters(httpExchange.getRequestURI());
-                    parametros.forEach((key, value)->{
-                        System.out.println("Key:: "+key);
-                        value.forEach((s)->{
-                            System.out.println("\t"+s);
-                        });
+        final Headers headers = httpExchange.getResponseHeaders();
+        final String requestMethod = httpExchange.getRequestMethod().toUpperCase();
+        switch (requestMethod) {
+            case Util.METHOD_GET:
+                final String responseBody = "{\"UnderConstruction\":true}";
+                headers.set(Util.HEADER_CONTENT_TYPE, String.format("application/json; charset=%s", Util.CHARSET));
+                final byte[] rawResponseBody = responseBody.getBytes(Util.CHARSET);
+                httpExchange.sendResponseHeaders(Util.STATUS_OK, rawResponseBody.length);
+                httpExchange.getResponseBody().write(rawResponseBody);
+                break;
+            case Util.METHOD_OPTIONS:
+                headers.set(Util.HEADER_ALLOW, Util.ALLOWED_METHODS);
+                httpExchange.sendResponseHeaders(Util.STATUS_OK, Util.NO_RESPONSE_LENGTH);
+                break;
+            default:
+                headers.set(Util.HEADER_ALLOW, Util.ALLOWED_METHODS);
+                httpExchange.sendResponseHeaders(Util.STATUS_METHOD_NOT_ALLOWED, Util.NO_RESPONSE_LENGTH);
+                break;
+        }
 
-                    });
-                    final String responseBody = "{\"hello world!\":2}";
-                    headers.set(HEADER_CONTENT_TYPE, String.format("application/json; charset=%s", Util.CHARSET));
-                    final byte[] rawResponseBody = responseBody.getBytes(Util.CHARSET);
-                    httpExchange.sendResponseHeaders(STATUS_OK, rawResponseBody.length);
-                    httpExchange.getResponseBody().write(rawResponseBody);
-                    break;
-                case METHOD_OPTIONS:
-                    headers.set(HEADER_ALLOW, ALLOWED_METHODS);
-                    httpExchange.sendResponseHeaders(STATUS_OK, NO_RESPONSE_LENGTH);
-                    break;
-                default:
-                    headers.set(HEADER_ALLOW, ALLOWED_METHODS);
-                    httpExchange.sendResponseHeaders(STATUS_METHOD_NOT_ALLOWED, NO_RESPONSE_LENGTH);
-                    break;
-            }
-
-            httpExchange.close();
+        httpExchange.close();
 
     }
 
