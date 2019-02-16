@@ -1,0 +1,13 @@
+{
+  "programacion": [
+    {"hora": "12:30","nombre": "Programa1", "descripcion": "Aqui la descripcion"},
+    {"hora": "12:30","nombre": "Programa2", "descripcion": "Aqui la descripcion"},
+    {"hora": "14:30","nombre": "Programa3", "descripcion": "Aqui la descripcion"},
+    {"hora": "15:30","nombre": "Programa4", "descripcion": "Aqui la descripcion"},
+    {"hora": "16:30","nombre": "Programa5", "descripcion": "Aqui la descripcion"},
+    {"hora": "17:30","nombre": "Programa6", "descripcion": "Aqui la descripcion"},
+    {"hora": "18:30","nombre": "Programa7", "descripcion": "Aqui la descripcion"}
+  ],
+  "nombre": "TVE3"
+
+}

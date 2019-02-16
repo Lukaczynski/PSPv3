@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class Util {
 
@@ -26,7 +27,13 @@ public class Util {
     public static final String METHOD_GET = "GET";
     public static final String METHOD_OPTIONS = "OPTIONS";
     public static final String ALLOWED_METHODS = METHOD_GET + "," + METHOD_OPTIONS;
-    public static final String PATH= "canales.bin";
+    private static final Pattern PATTERN = Pattern.compile(
+            "^(([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.){3}([01]?\\d\\d?|2[0-4]\\d|25[0-5])$");
+
+    public static boolean validate(final String ip) {
+        return PATTERN.matcher(ip).matches();
+    }
+
     public static Map<String, List<String>> getRequestParameters(final URI requestUri) {
         final Map<String, List<String>> requestParameters = new LinkedHashMap<>();
         final String requestQuery = requestUri.getRawQuery();

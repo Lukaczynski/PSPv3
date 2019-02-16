@@ -4,19 +4,24 @@ package server.handlers;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import org.json.JSONObject;
 import server.Controlador;
 import server.util.Util;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
 
 public class HandlerAdmin implements HttpHandler {
 
-
+    Controlador controlador;
 
     public HandlerAdmin(Controlador controlador) {
+        this.controlador=controlador;
     }
 
     @Override
@@ -36,9 +41,13 @@ public class HandlerAdmin implements HttpHandler {
                         });
 
                     });
-                    final String responseBody = "{\"Mensaje!\":\"Hola \"}";
-                    headers.set(Util.HEADER_CONTENT_TYPE, String.format("text/html; charset=%s", Util.CHARSET));
-                    final byte[] rawResponseBody = responseBody.getBytes(Util.CHARSET);
+
+                    controlador.update();
+                    JSONObject json= new JSONObject();
+                    json.put("canales",controlador.canales);
+                    headers.set(Util.HEADER_CONTENT_TYPE, String.format("application/json; charset=%s", Util.CHARSET));
+
+                    final byte[] rawResponseBody = new String(json.toString()).getBytes(Util.CHARSET);
                     httpExchange.sendResponseHeaders(Util.STATUS_OK, rawResponseBody.length);
                     httpExchange.getResponseBody().write(rawResponseBody);
                     break;
