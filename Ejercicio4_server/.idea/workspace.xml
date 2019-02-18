@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e288b24b-bd12-486f-8741-ed0dae9d1508" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/libraries/json_20180813.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/lib/json-20180813.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/cliente/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/cliente/vmc/Controlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/cliente/vmc/Vista.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/cliente/vmc/Vista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio2_Server/.idea/libraries/json_20180813.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio2_Server/canales/canal1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio2_Server/canales/canal2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio2_Server/canales/canal3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio2_Server/lib/json-20180813.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio3/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio3/.idea/libraries/org_apache_commons_codec.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio3/lib/bcprov-jdk15on-161.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio3/lib/org-apache-commons-codec.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio3/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio4_Client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ejercicio4_Client/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/Ejercicio2_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/Ejercicio2_Server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/Controlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/Main$Chanels.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/handlers/HandlerAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/handlers/HandlerAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/handlers/HandlerJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/handlers/HandlerJson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/out/production/Ejercicio2_Server/server/util/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/handlers/HandlerAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/handlers/HandlerAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/handlers/HandlerJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/handlers/HandlerJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio2_Server/src/server/util/Util.java" afterDir="false" />
-    </list>
+    <list default="true" id="e288b24b-bd12-486f-8741-ed0dae9d1508" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +55,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,7 +67,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,24 +114,24 @@
       <updated>1550280952355</updated>
       <workItem from="1550280957281" duration="99000" />
       <workItem from="1550281064312" duration="6376000" />
+      <workItem from="1550327919145" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6475000" />
+    <option name="totallyTimeSpent" value="7074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="22" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
@@ -181,6 +144,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
